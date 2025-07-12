@@ -1,13 +1,212 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+@font-face {
+    font-family: fuenteProyecto;
+    src: url(../fonts/MyriadPro-Light.otf);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+body {
+    font-family: fuenteProyecto;
     background-color: black;
+}
+
+.contenedor {
     background-image: url(../images/fondo1.png);
     background-size: cover;
     background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
 }
 
+.kario {
+    background-image: url(../images/kairo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    animation: movimiento 4s;
+}
 
+@keyframes movimiento {
+    30% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+}
+
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: inicioSesion 3s;
+    animation-fill-mode: forwards;
+}
+
+.inicioSesion {
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    background-color: white;
+    border-radius: 67px;
+    width: 50vi;
+    height: 40vi;
+}
+
+@keyframes inicioSesion {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.karioLog {
+    margin-top: 2vi;
+}
+
+.bienvenida {
+    font-size: 2.5em;
+    font-weight: 800;
+    text-align: center;
+}
+
+.datos {
+    font-size: 1.25em;
+    font-weight: 400;
+}
+
+.user {
+    height: 1.56em;
+    font-size: 1.56em;
+    width: 30vi;
+}
+
+.userBox {
+    margin-top: -2vi;
+    column-gap: 2vi;
+    width: 30vi;
+    height: 2.5vi;
+}
+
+.userBox input {
+    width: 30vi;
+    height: 2.5vi;
+    border-radius: 1vi;
+}
+
+.contrasena {
+    height: 1.56em;
+    font-size: 1.56em;
+    width: 30vi;
+}
+
+.contrasenaBox {
+    margin: -2vi;
+    column-gap: 2vi;
+    width: 30vi;
+    height: 2.5vi;
+}
+
+.contrasenaBox input {
+    width: 30vi;
+    height: 2.5vi;
+    border-radius: 1vi;
+}
+
+.btnLogin button {
+    border-radius: 2vi;
+    margin-top: 1vi;
+    width: 15vi;
+    height: 3vi;
+    font-size: 1.5em;
+    background-color: orange;
+    color: white;
+    border: 0;
+}
+
+.text p {
+    font-size: 1em;
+    font-weight: 100;
+}
+
+/* clases page 2... se reutilizarán algunas de las anteriores*/
+
+.contenedorBienvenido {
+    background-image: url(../images/kairo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bienvenidoPanel {
+    display: grid;
+    grid-template-columns: auto;
+    background-color: white;
+    justify-items: center;
+    width: 40vw;
+    height: 50vh;
+    border-radius: 67px;
+    opacity: 0;
+    animation: panel 6s;
+    animation-fill-mode: forwards;
+}
+
+.iconProfile img {
+    width: 8vi;
+}
+
+@keyframes panel {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

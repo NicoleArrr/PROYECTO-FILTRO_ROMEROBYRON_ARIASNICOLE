@@ -250,7 +250,7 @@ body {
     align-content: center;
     font-size: 1.5em;
     width: 100vw;
-    height:10vh;
+    height: 5vh;
 }
 
 .linea {
@@ -272,12 +272,13 @@ body {
     background-image: url(../images/kairo.png);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
     height: 4vi;
     width: 3vi;
     margin-top: 2vi;
 }
-.profile{
+
+.profile {
     display: grid;
     grid-template-columns: auto auto auto;
     column-gap: 2vi;
@@ -285,15 +286,100 @@ body {
     align-items: center;
     align-content: center;
 }
-.indicadores{
+
+.indicadores {
     display: grid;
-   margin-top: 4vi;
-   justify-items: center;
-   row-gap: 2vi;
+    margin-top: 4vi;
+    justify-items: center;
+    row-gap: 2vi;
+    border: 2px solid red;
 }
-.titulo{
-    font-size: 1.5em;
+
+.titulo {
+    font-size: 1.5vi;
 }
-.parrafoPrincipal{
+
+.parrafoPrincipal {
     font-size: 1.4em;
+}
+
+.tablaInd {
+    display: grid;
+    grid-template-columns: repeat(10, 6vi);
+    grid-template-rows: repeat(8, 2vi);
+    gap: 2.5vi;
+    margin: 0;
+    width: 90vw;
+    height: 60vh;
+}
+
+.tituloInd {
+    display: grid;
+    grid-template-columns: repeat(10, 7.5vi);
+    grid-column: 1/10;
+    justify-items: center;
+    grid-row: 1;
+    gap: 2vi;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.item1, .item2, .item3, .item4, .item5, .item6 {
+    grid-template-columns: repeat(10, 7.5vi);
+    font-size: 1.2em;
+    gap: 2vi;
+    align-content: center;
+    justify-items: center;
+    border-radius: 30px;
+    border: 1px solid black;
+    width: 87.5vw;
+    height: 6vh;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+.item1 {
+    display: grid;
+    grid-column: 1/10;
+    grid-row: 2;
+}
+
+.item2 {
+    display: grid;
+    grid-column: 1/10;
+    grid-row: 3;
+}
+
+.item3 {
+    display: grid;
+    grid-column: 1/10;
+    grid-row: 4;
+}
+
+.item4 {
+    display: grid;
+    grid-column: 1/10;
+    grid-row: 5;
+}
+
+.item5 {
+    display: grid;
+    grid-column: 1/10;
+    grid-row: 6;
+}
+
+.item6 {
+    display: grid;
+    grid-column: 1/10;
+    grid-row: 7;
+    align-items: center;
+}
+
+.item8 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    align-content: center;
 }

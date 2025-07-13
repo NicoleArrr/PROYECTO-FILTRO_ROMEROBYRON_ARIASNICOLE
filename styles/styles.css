@@ -10,6 +10,7 @@
 }
 
 button:hover {
+    /*al acercar el cursor a un botón, cambia*/
     cursor: pointer;
 }
 
@@ -19,6 +20,7 @@ body {
 }
 
 .contenedor {
+    /*Contenedor de los elementos*/
     background-image: url(../images/fondo1.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -27,6 +29,7 @@ body {
 }
 
 .kario {
+    /*contiene el login*/
     background-image: url(../images/kairo.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -40,6 +43,8 @@ body {
 }
 
 @keyframes movimiento {
+
+    /*animación para que aparezca y desaparezca el logo como se solicitó*/
     30% {
         opacity: 0;
     }
@@ -49,16 +54,8 @@ body {
     }
 }
 
-.popup {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    animation: inicioSesion 3s;
-    animation-fill-mode: forwards;
-}
-
 .inicioSesion {
+    /* Login*/
     display: grid;
     grid-template-columns: auto;
     justify-items: center;
@@ -66,9 +63,14 @@ body {
     border-radius: 67px;
     width: 50vi;
     height: 40vi;
+    opacity: 0;
+    animation: inicioSesion 3s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes inicioSesion {
+
+    /* Animación para que aparezca el contenedor del login*/
     0% {
         opacity: 0;
     }
@@ -167,29 +169,36 @@ body {
     background-position: center;
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
     align-items: center;
+    justify-content: space-around;
+
 }
 
 .bienvenidoPanel {
-    display: grid;
-    grid-template-columns: auto;
     background-color: white;
     justify-items: center;
     width: 40vw;
     height: 50vh;
     border-radius: 67px;
-    opacity: 0;
+    opacity: 1;
+    grid-row: 1;
+    grid-column: 1;
     animation: panel 6s;
     animation-fill-mode: forwards;
+
 }
 
 .iconProfile img {
     width: 8vi;
+    height: 7vi;
+    border-radius: 50%;
+    margin: 2vi;
 }
 
-@keyframes panel {
+@keyframes anel {
     0% {
         opacity: 1;
     }
@@ -209,4 +218,82 @@ body {
     100% {
         opacity: 0;
     }
+}
+
+.panelPrincipal {
+    grid-column: 1;
+    grid-row: 1;
+    opacity: 1;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    animation: panelPrincipal steps(1) 6s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes anelPrincipal {
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    align-items: end;
+    justify-items: center;
+    align-content: center;
+    font-size: 1.5em;
+    width: 100vw;
+    height:10vh;
+}
+
+.linea {
+    grid-column: 1/8;
+    height: 1vi;
+    width: 100vw;
+    align-content: end;
+}
+
+.linea hr {
+    margin-top: 2.5vi;
+}
+
+.botones img {
+    margin-bottom: -0.4vi;
+}
+
+.botonesLogo {
+    background-image: url(../images/kairo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 4vi;
+    width: 3vi;
+    margin-top: 2vi;
+}
+.profile{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 2vi;
+    height: 2vi;
+    align-items: center;
+    align-content: center;
+}
+.indicadores{
+    display: grid;
+   margin-top: 4vi;
+   justify-items: center;
+   row-gap: 2vi;
+}
+.titulo{
+    font-size: 1.5em;
+}
+.parrafoPrincipal{
+    font-size: 1.4em;
 }

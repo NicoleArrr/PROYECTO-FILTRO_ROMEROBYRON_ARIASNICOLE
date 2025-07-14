@@ -15,6 +15,8 @@ button:hover {
 }
 
 body {
+    width: 100%;
+    height: auto;
     font-family: fuenteProyecto;
     background-color: black;
 }
@@ -24,8 +26,7 @@ body {
     background-image: url(../images/fondo1.png);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
+
 }
 
 .kario {
@@ -61,8 +62,9 @@ body {
     justify-items: center;
     background-color: white;
     border-radius: 67px;
-    width: 50vi;
-    height: 40vi;
+    gap: 3vh;
+    width: 50vw;
+    height: auto;
     opacity: 0;
     animation: inicioSesion 3s;
     animation-fill-mode: forwards;
@@ -93,11 +95,11 @@ body {
 }
 
 .karioLog {
-    background-image: url(../images/kairo.png);
-    padding-top: 2vw;
-    width: 10vw;
-    height: 10vh;
-    background-position: bottom;
+    background-image: url(../imageskairo.png);
+    margin-top: 2vw;
+    width: 6vw;
+    height: auto;
+    background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -109,13 +111,13 @@ body {
 }
 
 .datos {
-    font-size: 1.25em;
+    font-size: 1.5em;
     font-weight: 400;
 }
 
 .user {
     height: 1.56em;
-    font-size: 1.56em;
+    font-size: 2em;
     width: 30vi;
 }
 
@@ -134,7 +136,7 @@ body {
 
 .contrasena {
     height: 1.56em;
-    font-size: 1.56em;
+    font-size: 2em;
     width: 30vi;
 }
 
@@ -163,8 +165,9 @@ body {
 }
 
 .text p {
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: 100;
+    margin-bottom: 2vh;
 }
 
 /* clases page 2... se reutilizarán algunas de las anteriores*/
@@ -176,6 +179,7 @@ body {
     width: 100vw;
     height: 100vh;
     display: grid;
+    gap: 3vh;
     grid-template-columns: auto;
     justify-items: center;
     align-items: center;
@@ -184,6 +188,8 @@ body {
 }
 
 .bienvenidoPanel {
+    display: grid;
+    grid-template-rows: auto;
     background-color: white;
     justify-items: center;
     width: 40vw;
@@ -192,6 +198,7 @@ body {
     opacity: 1;
     grid-row: 1;
     grid-column: 1;
+    gap: 0.5vh;
     animation: panel 6s;
     animation-fill-mode: forwards;
 
@@ -229,7 +236,7 @@ body {
 .panelPrincipal {
     grid-column: 1;
     grid-row: 1;
-    opacity: 1;
+    opacity: 0;
     background-color: white;
     width: 100vw;
     height: 100vh;
@@ -238,7 +245,7 @@ body {
     animation-fill-mode: forwards;
 }
 
-@keyframes  anelPrincipal {
+@keyframes panelPrincipal {
     50% {
         opacity: 0;
     }
@@ -329,7 +336,12 @@ body {
     font-size: 0.9em;
 }
 
-.item1, .item2, .item3, .item4, .item5, .item6 {
+.item1,
+.item2,
+.item3,
+.item4,
+.item5,
+.item6 {
     grid-template-columns: repeat(10, 7.5vi);
     font-size: 1.2em;
     gap: 2vi;
@@ -382,14 +394,16 @@ body {
     align-items: center;
 }
 
-.item8 button{
+.item8 button {
     width: 15vw;
     height: 6vh;
     border-radius: 67px;
     background-color: orange;
     font-size: 1.2em;
-    
-}.item8 a{
+
+}
+
+.item8 a {
     color: white;
     text-decoration: none;
 }

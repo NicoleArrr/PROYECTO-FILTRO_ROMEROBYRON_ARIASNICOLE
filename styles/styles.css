@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: fuenteProyecto;
+    src: url(../fonts/MyriadPro-Light.otf);
+}
+
+button:hover {
+    /*al acercar el cursor a un botón, cambia*/
+    cursor: pointer;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    font-family: fuenteProyecto;
+    background-color: black;
+}
+
+.contenedor {
+    /*Contenedor de los elementos*/
+    background-image: url(../images/fondo1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.kario {
+    /*contiene el login*/
+    background-image: url(../images/kairo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    animation: movimiento 4s;
+}
+
+@keyframes movimiento {
+
+    /*animación para que aparezca y desaparezca el logo como se solicitó*/
+    30% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+}
+
+.inicioSesion {
+    /* Login*/
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    background-color: white;
+    border-radius: 67px;
+    gap: 3vh;
+    width: 50vw;
+    height: auto;
+    opacity: 0;
+    animation: inicioSesion 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes inicioSesion {
+
+    /* Animación para que aparezca el contenedor del login*/
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.karioLog {
+    background-image: url(../imageskairo.png);
+    margin-top: 2vw;
+    width: 6vw;
+    height: auto;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.bienvenida {
+    font-size: 2em;
+    font-weight: 800;
+    text-align: center;
+}
+
+.datos {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.user {
+    height: 1.56em;
+    font-size: 2em;
+    width: 30vi;
+}
+
+.userBox {
+    margin-top: -2vi;
+    column-gap: 2vi;
+    width: 30vi;
+    height: 2.5vi;
+}
+
+.userBox input {
+    width: 30vi;
+    height: 2.5vi;
+    border-radius: 1vi;
+}
+
+.contrasena {
+    height: 1.56em;
+    font-size: 2em;
+    width: 30vi;
+}
+
+.contrasenaBox {
+    margin: -2vi;
+    column-gap: 2vi;
+    width: 30vi;
+    height: 2.5vi;
+}
+
+.contrasenaBox input {
+    width: 30vi;
+    height: 2.5vi;
+    border-radius: 1vi;
+}
+
+.btnLogin button {
+    border-radius: 2vi;
+    margin-top: 1vi;
+    width: 15vi;
+    height: 3vi;
+    font-size: 1.5em;
+    background-color: orange;
+    color: white;
+    border: 0;
+}
+
+.text p {
+    font-size: 1.5em;
+    font-weight: 100;
+    margin-bottom: 2vh;
+}
+
+/* clases page 2... se reutilizarán algunas de las anteriores*/
+
+.contenedorBienvenido {
+    background-image: url(../images/kairo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    gap: 3vh;
+    grid-template-columns: auto;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.bienvenidoPanel {
+    display: grid;
+    grid-template-rows: auto;
+    background-color: white;
+    justify-items: center;
+    width: 40vw;
+    height: 50vh;
+    border-radius: 67px;
+    opacity: 1;
+    grid-row: 1;
+    grid-column: 1;
+    gap: 0.5vh;
+    animation: panel 6s;
+    animation-fill-mode: forwards;
+
+}
+
+.iconProfile img {
+    width: 8vi;
+    height: 7vi;
+    border-radius: 50%;
+    margin: 2vi;
+}
+
+@keyframes panel {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.panelPrincipal {
+    grid-column: 1;
+    grid-row: 1;
+    opacity: 0;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    animation: panelPrincipal steps(1) 6s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes panelPrincipal {
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+/*Navegador principal*/
+.menu {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    align-items: end;
+    justify-items: center;
+    align-content: center;
+    font-size: 1.5em;
+    width: 100vw;
+    height: 5vh;
+}
+
+.linea {
+    grid-column: 1/8;
+    height: 1vi;
+    width: 100vw;
+    align-content: end;
+}
+
+.linea hr {
+    margin-top: 2.5vi;
+}
+
+.botones img {
+    margin-bottom: -0.4vi;
+}
+
+.botonesLogo {
+    background-image: url(../images/kairo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 4vi;
+    width: 3vi;
+    margin-top: 2vi;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 2vi;
+    height: 2vi;
+    align-items: center;
+    align-content: center;
+}
+/*Aqui finaliza el menu*/
+
+.indicadores {
+    display: grid;
+    margin-top: 4vi;
+    justify-items: center;
+    row-gap: 2vi;
+}
+
+.titulo {
+    font-size: 1.5vi;
+}
+
+.parrafoPrincipal {
+    font-size: 1.4em;
+}
+
+.tablaInd {
+    display: grid;
+    grid-template-columns: repeat(10, 6vi);
+    grid-template-rows: repeat(8, 2vi);
+    gap: 2.5vi;
+    margin: 0;
+    width: 90vw;
+    height: 60vh;
+    border: 1px solid black;
+
+}
+
+.tituloInd {
+    display: grid;
+    grid-template-columns: repeat(10, 7.5vi);
+    grid-column: 1/10;
+    justify-items: center;
+    grid-row: 1;
+    gap: 2vi;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.item1,
+.item2,
+.item3,
+.item4,
+.item5,
+.item6 {
+    grid-template-columns: repeat(10, 7.5vi);
+    font-size: 1.2em;
+    gap: 2vi;
+    align-content: center;
+    justify-items: center;
+    border-radius: 30px;
+    border: 1px solid black;
+    width: 87.5vw;
+    height: 6vh;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+.item1 {
+    display: grid;
+    grid-column: 1/10;
+    grid-row: 2;
+}
+
+.item2 {
+    display: grid;
+    grid-column: 1/10;
+    grid-row: 3;
+}
+
+.item3 {
+    display: grid;
+    grid-column: 1/10;
+    grid-row: 4;
+}
+
+.item4 {
+    display: grid;
+    grid-column: 1/10;
+    grid-row: 5;
+}
+
+.item5 {
+    display: grid;
+    grid-column: 1/10;
+    grid-row: 6;
+}
+
+.item6 {
+    display: grid;
+    grid-column: 1/10;
+    grid-row: 7;
+    align-items: center;
+}
+
+.item8 button {
+    width: 15vw;
+    height: 6vh;
+    border-radius: 67px;
+    background-color: orange;
+    font-size: 1.2em;
+
+}
+
+.item8 a {
+    color: white;
+    text-decoration: none;
+}

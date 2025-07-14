@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'Light';
+    src: url(../fonts/MyriadPro-Light.otf);
+}
+
+@font-face {
+    font-family: 'Regular';
+    src: url(../fonts/MYRIADPRO-REGULAR.OTF);
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    align-items: end;
+    justify-items: center;
+    align-content: center;
+    font-size: 1.5em;
+    width: 100vw;
+    height: 5vh;
+}
+
+.linea {
+    grid-column: 1/8;
+    height: 1vi;
+    width: 100vw;
+    align-content: end;
+}
+
+.linea hr {
+    margin-top: 2.5vi;
+}
+
+.botones img {
+    margin-bottom: -0.4vi;
+}
+
+.botonesLogo {
+    background-image: url(../images/kairo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 4vi;
+    width: 3vi;
+    margin-top: 2vi;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 2vi;
+    height: 2vi;
+    align-items: center;
+    align-content: center;
+}
+

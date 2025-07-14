@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: fuenteProyecto;
+    src: url(../fonts/MyriadPro-Light.otf);
+}
+
+button:hover {
+    /*al acercar el cursor a un botón, cambia*/
+    cursor: pointer;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    font-family: fuenteProyecto;
+    background-color: black;
+}
+
+.contenedor {
+    /*Contenedor de los elementos*/
+    background-image: url(../images/fondo1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/*Navegador principal*/
+.menu {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    align-items: end;
+    justify-items: center;
+    align-content: center;
+    font-size: 1.5em;
+    width: 100vw;
+    height: 10vh;
+}
+
+.linea {
+    grid-column: 1/8;
+    height: 1vi;
+    width: 100vw;
+    align-content: end;
+}
+
+.linea hr {
+    margin-top: 2.5vi;
+}
+
+.botones img {
+    margin-bottom: -0.4vi;
+}
+
+.botonesLogo {
+    background-image: url(../images/kairo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 4vi;
+    width: 3vi;
+    margin-top: 2vi;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 2vi;
+    height: 2vi;
+    align-items: center;
+    align-content: center;
+}
+.profileImg{
+    width: 4vw;
+    height: 8vh;
+    border-radius: 50%;
+}
+
+/*Aqui finaliza el menu*/
+
+.panelPrincipal {
+    grid-column: 1;
+    grid-row: 1;
+    opacity: 1;
+    background-color: white;
+    width: 100vw;
+    height: auto;
+    padding-bottom: 2vh;
+    animation: panelPrincipal steps(1) 6s;
+    animation-delay: 1s;
+}
+.indicadores {
+    display: grid;
+    margin-top: 4vi;
+    justify-items: center;
+    row-gap: 2vi;
+}
+
+.titulo {
+    display: flex;
+    font-size: 1.5vi;
+}
+
+.parrafoPrincipal {
+    font-size: 1.4em;
+}
+
+.tablaInd {
+    display: grid;
+    grid-template-columns: repeat(10, 6vi);
+    grid-template-rows: repeat(8, 2vi);
+    gap: 2.5vi;
+    margin: 0;
+    width: 90vw;
+    height: 60vh;
+
+}
+
+.tituloInd {
+    display: grid;
+    grid-template-columns: repeat(10, 7.5vi);
+    grid-column: 1/10;
+    justify-items: center;
+    grid-row: 1;
+    gap: 2vi;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.item1,
+.item2,
+.item3,
+.item4,
+.item5,
+.item6 {
+    grid-template-columns: repeat(10, 7.5vi);
+    font-size: 1.2em;
+    gap: 2vi;
+    align-content: center;
+    justify-items: center;
+    border-radius: 30px;
+    border: 1px solid black;
+    width: 87.5vw;
+    height: 6vh;
+    text-align: center;
+    align-items: center;
+}
+
+
+
+.item1 {
+    display: grid;
+    grid-column: 1/10;
+    grid-row: 2;
+}
+
+.item2 {
+    display: grid;
+    grid-column: 1/10;
+    grid-row: 3;
+}
+
+.item3 {
+    display: grid;
+    grid-column: 1/10;
+    grid-row: 4;
+}
+
+.item4 {
+    display: grid;
+    grid-column: 1/10;
+    grid-row: 5;
+}
+
+.item5 {
+    display: grid;
+    grid-column: 1/10;
+    grid-row: 6;
+}
+
+.item6 {
+    display: grid;
+    grid-column: 1/10;
+    grid-row: 7;
+    align-items: center;
+}
+.item8{
+    display: flex;
+    justify-content: flex-end;
+    width: 95vw;
+    height: 6vh;
+}
+.item8 img{
+    height: 7vh;
+}
